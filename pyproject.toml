@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dstv-tools"
+version = "0.1.0"
+description = "Visualization and export tools for DSTV files"
+authors = [
+    { name="Federico Sidraschi" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "dstvparser>=0.1.0",
+    "ezdxf>=1.3.0,<2.0.0",
+    "matplotlib>=3.8.0,<4.0.0",
+    "numpy>=1.24.0,<2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
