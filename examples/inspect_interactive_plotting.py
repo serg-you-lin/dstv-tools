@@ -1,6 +1,4 @@
 from pathlib import Path
-import sys
-
 
 from dstv_tools.plotters.interactive_plotter import InteractiveProfilePlotter
 from dstv_tools.exporters.compose_profile_faces import ComposeProfileFaces

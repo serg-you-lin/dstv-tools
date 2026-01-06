@@ -1,10 +1,5 @@
-
 from pathlib import Path
-import sys
 
-# Aggiungi la root del progetto al path per importare dstv_tools
-project_root = Path(__file__).parent.parent
-sys.path.insert(0, str(project_root))
 #from dstv_parser.DSTVParser.parsers.factory import NCFileParserFactory
 from dstvparser.parsers.factory import NCFileParserFactory
 from dstv_tools.exporters.compose_profile_faces import ComposeProfileFaces
