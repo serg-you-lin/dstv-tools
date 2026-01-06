@@ -11,10 +11,10 @@ Hole Labeling: Automatic annotations for holes and machining operations
 # Installation
 ## Clone the repository
 ```bash
-git clone https://github.com/yourusername/dstv-tools.git
+git clone https://github.com/serg-you-lin/dstv-tools.git
 cd dstv-tools
 ```
-
+ 
 ## Install dependencies
 pip install -r requirements.txt
 
@@ -24,13 +24,12 @@ pip install -e .
 # Quick Start
 ## Example 1: Profile Visualization
 ```python
-from pathlib import Path
 from dstvparser.parsers.factory import NCFileParserFactory
 from dstv_tools.exporters.compose_profile_faces import ComposeProfileFaces
 from dstv_tools.plotters.profile_plotter import ProfilePlotter
 
 # Load NC file
-nc_path = Path("data/722.nc")
+nc_path = 'your_nc_file
 nc_part = NCFileParserFactory.create_parser(nc_path)
 profile = nc_part.parse()
 
@@ -45,7 +44,14 @@ plotter.show()
 
 ## Example 2: Interactive Visualization
 ```python
+from dstvparser.parsers.factory import NCFileParserFactory
+from dstv_tools.exporters.compose_profile_faces import ComposeProfileFaces
 from dstv_tools.plotters.interactive_plotter import InteractiveProfilePlotter
+
+# Load NC file
+nc_path = 'your_nc_file
+nc_part = NCFileParserFactory.create_parser(nc_path)
+profile = nc_part.parse()
 
 # Create an interactive plotter with offset between faces
 profile_faces = ComposeProfileFaces(profile, offset_between_faces=150)
@@ -61,7 +67,14 @@ plotter.show(fig)
 ```
 ## Example 3: DXF Export
 ```python
+from dstvparser.parsers.factory import NCFileParserFactory
+from dstv_tools.exporters.compose_profile_faces import ComposeProfileFaces
 from dstv_tools.exporters.profile_dxf_exporter import ProfileDXFExporter
+
+# Load NC file
+nc_path = 'your_nc_file
+nc_part = NCFileParserFactory.create_parser(nc_path)
+profile = nc_part.parse()
 
 # Create the exporter
 exporter = ProfileDXFExporter(profile_faces)
@@ -88,6 +101,7 @@ file_complete = exporter.export_all_faces(
 ```
 
 # Project Structure
+```bash
 dstv-tools/
 ├── dstv_tools/
 │   ├── exporters/          # Export modules
@@ -107,6 +121,8 @@ dstv-tools/
 │   ├── inspect_plotting_faces.py
 │   └── data/               # Sample NC files
 └── requirements.txt
+```
+
 🔧 Dependencies
 
 dstvparser: For parsing DSTV NC/NC1 files
